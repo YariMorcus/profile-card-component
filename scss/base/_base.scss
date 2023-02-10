@@ -20,6 +20,10 @@ body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    background-image: url(../img/bg-pattern-top.svg), url(../img/bg-pattern-bottom.svg);
+    background-position: -80rem -50rem, 46vw 30vh;
+    background-repeat: no-repeat;
+    background-color: v.$dark-cyan;
 }
 
 main {

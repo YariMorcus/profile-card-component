@@ -4,3 +4,75 @@
 // Import mixins and variables
 @use '../abstracts/mixins' as m;
 @use '../abstracts/variables' as v;
+
+.profile {
+    width: 85%;
+    max-width: 32rem;
+    margin: 0 auto;
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: t.$font-size;
+    background: url("../img/bg-pattern-card.svg") #fff no-repeat;
+    border-radius: 1.5rem;
+
+    @include m.breakpoint-sm() {
+        max-width: 34rem;
+    }
+
+    &__img {
+        margin: 9rem auto 0;
+        border-radius: 100%;
+        border: .5rem solid v.$white;
+    }
+
+    &__header {
+        text-align: center;
+    }
+
+    &__name {
+        display: inline-block;
+        margin-top: 1.5rem;
+    }
+
+    &__age {
+        margin-left: .5rem;
+    }
+
+    &__city {
+        margin: .5rem auto 0;
+        font-size: 1.3rem;
+    }
+
+    &__stats {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 3rem 0 2.5rem;
+        padding-top: 3rem;
+        border-top: 1px solid scale-color(v.$dark-gray, $lightness: 60%);
+    }
+
+    &__followers,
+    &__likes,
+    &__photos {
+        text-align: center;
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+
+    &__age,
+    &__city,
+    &__followers,
+    &__likes,
+    &__photos {
+        color: v.$dark-grayish-blue;
+    }
+
+    &__name,
+    &__followers-count,
+    &__likes-count,
+    &__photos-count {
+        font-family: "Kumbh Sans", sans-serif;
+        font-weight: 700;
+        font-size: t.$font-size;
+        color: v.$very-dark-desaturated-blue;
+    }
+}
