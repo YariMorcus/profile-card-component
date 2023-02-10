@@ -21,9 +21,15 @@ body {
     text-rendering: optimizeSpeed;
     line-height: 1.5;
     background-image: url(../img/bg-pattern-top.svg), url(../img/bg-pattern-bottom.svg);
-    background-position: -80rem -50rem, 46vw 30vh;
+    background-position: -45rem -41rem,47vw 50vh;
     background-repeat: no-repeat;
     background-color: v.$dark-cyan;
+    background-size: 65rem 65rem, 65rem 65rem;
+
+    @include m.breakpoint-md() {
+        background-position: -17.4rem -49rem,51.4vw 48vh;
+        background-size: 85rem 85rem, 85rem 85rem;
+    }
 }
 
 main {
@@ -59,13 +65,13 @@ img {
     padding: 0 1.28rem 1.28rem;
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 1.2rem;
-    text-align: center;
+    color: v.$black;
 
     &__link {
-        // color: v.$very-dark-cyan;
+        color: v.$black;
 
         &:hover {
-            // color: scale-color(v.$very-dark-cyan, $lightness: 10%);
+            color: scale-color(v.$black, $lightness: 20%);
         }
 
         &:focus-visible {
